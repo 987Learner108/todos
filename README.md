@@ -71,3 +71,20 @@ export default defineConfig([
   },
 ])
 ```
+
+## Hosting on GitHub Pages
+
+This project can be deployed to GitHub Pages using the included GitHub Actions workflow (`.github/workflows/gh-pages.yml`). The Vite config is set to use relative paths so the build is portable.
+
+Steps to publish:
+
+- Push your repository to GitHub (make sure your default branch is `main` or `master`).
+- Actions will run automatically on push and publish the `dist` directory to the `gh-pages` branch.
+- In the repository settings -> Pages, set the source to the `gh-pages` branch (if not set automatically).
+
+If you prefer manual deployment, run:
+
+```bash
+npm run build
+# then publish the contents of dist/ to your Pages branch/root
+```
