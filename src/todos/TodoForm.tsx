@@ -37,11 +37,11 @@ export const TodoForm = ({inputValue,task, editIndex, setTask, setInputValue, se
           alert("already have the task");
           return;
         }
-          setTask((prev) => [...prev, {
+          setTask((prev) => [{
               id: Date.now().toString(),
               content: trimmedValue,
               checked: false,
-          },
+          }, ...prev
           ]);
       }
         setInputValue({
